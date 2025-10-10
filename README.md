@@ -1,52 +1,139 @@
-This project no longer works(you can edit it if u want)
+# 🎌 Zoro.to - Clone
 
-## try this 👇
+> **Status**: 🚀 **Project Revival in Progress**
 
-[Better version of the site](https://github.com/PacaHat/Anipaca)
+This project is a revival of an anime streaming platform. Feel free to customize it as you like!
 
-## Acknowledgements
 
-[anime-api](https://github.com/kirixen/gogo-api) The api used for the need of this website. 
+## 🛠️ Tech Stack
 
-[![Join our Discord server!](https://invidget.switchblade.xyz/VsPXjNRcbw)](https://discord.com/invite/VsPXjNRcbw)
-<hr/>
+- PHP 7.4+
+- **Database**: MySQL/MariaDB
+- **Frontend**: HTML5, CSS3, JavaScript (jQuery)
+- **Styling**: Bootstrap 4, Font Awesome
+- **API**: [AniWatch API](https://github.com/ghoshRitesh12/aniwatch-api)
 
-## Requirements
---> Php environment (use .htaccess must be enabled in localhost) or Directly Upload the code on php supported hosting (No editing Required Just Upload and Enjoy)
+## 📋 Requirements
 
-_config.php
+### System Requirements
+- **PHP**: 7.4 or higher
+- **MySQL**: 5.7 or higher (or MariaDB)
+- **Web Server**: Apache with mod_rewrite enabled
+- **Extensions**: mysqli, json, curl
+
+### Development Environment
+- **XAMPP** (recommended for local development)
+
+## 🚀 Quick Start
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/SailorSammyy/zoro.to-clone.git
+cd zoro.to-clone
 ```
+
+### 2. Database Setup
+1. Import the database schema:
+   ```sql
+   mysql -u root -p < AutoAnime.sql
+   ```
+2. Create a database named `anime` (or your preferred name)
+
+### 3. Configuration
+Edit `_config.php` with your settings:
+
+```php
 <?php 
-$conn = mysqli_connect("localhost", 'root' , '', "anime") or die("Connection fail"); // mysql database
+// Database Configuration
+$conn = mysqli_connect("localhost", "root", "", "anime") or die("Connection failed");
 
-`localhost` - host name, `root` - Mysql username, and leave it root if u're on localhost , `` - it's the password of the mysql and leave it empty if you're on localhost, 'anime' - It's the database name inside of the mysql, u can give it any name u want ~
-
-$websiteTitle = "Zoro"; // website's name
-$websiteUrl = "//{$_SERVER['SERVER_NAME']}";  // if on local then after the `}` add a slash and `/name_of_the_folder`
+// Website Settings
+$websiteTitle = "Zoro";
+$websiteUrl = "//{$_SERVER['SERVER_NAME']}"; // if on localhost then add a slash(/) after the '}' and type the folder name
 $websiteLogo = $websiteUrl . "/files/images/logo_zoro.png";
-$contactEmail = "@gmail.com"; // ur email
+$contactEmail = "your-email@gmail.com";
+$version = "1.0";
 
-$version = "0.1"; // website version 
+// Social Links
+$discord = "https://dsc.gg/sailorsammyy";
+$github = "https://github.com/sailorsammyy";
+$twitter = "https://x.com/";
 
-$discord = "https://dsc.gg/kirixen"; // discord
-$github = "https://github.com/kirixen"; // github
-$twitter = "https://x.com/KiriX3n"; // twitter
- 
-$disqus = "https://your_disqus_shortname_here.disqus.com/embed.js"; // your disqus shortname
-$api = ""; // api here without the '/' at the end
+// External Services
+$disqus = "https://your-disqus-shortname.disqus.com/embed.js";
+$api = "https://your-api-endpoint.com"; // No slash(/) at the end
 
 $banner = $websiteUrl . "/files/images/banner.png";
 ?>
-
 ```
 
-The table for the database is on the `AutoAnime.sql`
+### 4. Local Development (XAMPP)
 
-## Local Deployment
+1. **Install XAMPP**: Download from [apachefriends.org](https://www.apachefriends.org/)
 
-You need to have `xampp` installed on your pc for following the intructions
+2. **Enable mod_rewrite**
 
-Go check out on yt on how to install n use it yeah !
+3. **Start Services**:
+   - Start Apache and MySQL in XAMPP Control Panel
 
-Make Sure You Edit $websiteUrl in _config.php before starting in localhost.. <br>
-And Enable the use of .htaccess in PHP enviornment
+4. **Access Your Site**:
+   - Visit: `http://localhost/zoro`
+
+
+## 🔧 Configuration Guide
+
+### Database Configuration
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `hostname` | Database host | `localhost` |
+| `username` | DB username | `root` |
+| `password` | DB password | `` (empty for localhost) |
+| `database` | Database name | `anime` |
+
+## 🌐 Deployment
+
+### Shared Hosting
+1. Upload all files to your hosting directory
+2. Import `AutoAnime.sql` to your database
+3. Update `_config.php` with your hosting details
+4. Ensure `.htaccess` is uploaded and working
+
+### VPS/Dedicated Server
+1. Set up LAMP stack (Linux, Apache, MySQL, PHP)
+2. Configure virtual host
+3. Enable mod_rewrite
+4. Set proper file permissions
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/feature`)
+3. **Commit** your changes (`git commit -m 'Add feature'`)
+4. **Push** to the branch (`git push origin feature/feature`)
+5. **Open** a Pull Request
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgements
+
+- **[AniWatch API](https://github.com/ghoshRitesh12/aniwatch-api)** - Provides anime data and streaming links
+- **Bootstrap** - For responsive design components
+- **Font Awesome** - For beautiful icons
+- **jQuery** - For interactive functionality
+
+## 💬 Community & Support
+
+[![Join our Discord server!](https://invidget.switchblade.xyz/SUsQnPWvxT)](https://discord.com/invite/SUsQnPWvxT)
+
+- **Discord**: Join our community for support and discussions
+- **Issues**: Report bugs or request features on GitHub
+
+---
+
+<div align="center">
+  <p>⭐ Star this repo if you found it helpful!</p>
+</div>
