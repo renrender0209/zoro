@@ -125,12 +125,54 @@ This project is open source and available under the [MIT License](LICENSE).
 - **Font Awesome** - For beautiful icons
 - **jQuery** - For interactive functionality
 
+## 📋 TODO - Zoro.to Clone Roadmap
+
+
+- [x] **Authentication System**
+  - [x] Registration and login
+  - [x] Profile
+  - [x] Watch history tracking
+  - [x] Favorites/Bookmarks system
+
+- [ ] **Search**
+  - [ ] Advanced search filters
+  - [ ] Recently added anime section
+
+- [ ] **User Experience**
+  - [ ] Dark/Light theme toggle
+  - [ ] Progressive Web App (PWA)
+  - [ ] Offline viewing capabilities
+  - [ ] Download episodes feature
+
+- [ ] **Features**
+  - [ ] User reviews and ratings
+  - [ ] Comment system for episodes
+  - [ ] sharing integration
+  - [ ] User recommendations
+
+- [ ] **Performance**
+  - [ ] Database optimization
+  - [ ] Caching system implementation
+
+- [ ] **Advanced Features**
+  - [ ] AI powered anime recommendations
+  - [ ] Watch party functionality
+  - [ ] Anime news integration
+
+### 🐛 Known Issues
+- [ ] Schedule loading
+
+---
+
 ## 💬 Community & Support
 
 [![Join our Discord server!](https://invidget.switchblade.xyz/SUsQnPWvxT)](https://discord.com/invite/SUsQnPWvxT)
 
 - **Discord**: Join our community for support and discussions
 - **Issues**: Report bugs or request features on GitHub
+
+### 🤝 Contributing to TODO Items
+Want to help with any of these features? Check out our [Contributing Guidelines](#-contributing) and pick an item from the TODO list!
 
 ---
 
