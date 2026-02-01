@@ -246,17 +246,14 @@ if (isset($results['data']['animes'])) {
                                         color: #000;
                                         background: #cae962;
                                         border: none;
-                                        border-radius: 6px;
                                         text-decoration: none;
                                         font-weight: 600;
                                         font-size: 14px;
-                                        transition: all 0.3s ease;
                                         position: relative;
                                         overflow: hidden;
                                     }
                                     
                                     .page-link:hover {
-                                        transform: translateY(-2px);
                                         box-shadow: 0 4px 12px rgba(202, 233, 98, 0.4);
                                         background: #b8d755;
                                         color: #000;
