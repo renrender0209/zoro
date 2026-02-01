@@ -100,36 +100,21 @@ This project is open source and available under the [MIT License](LICENSE).
 - [x] **Authentication System**
   - [x] Registration and login
   - [x] Profile
-  - [x] Watch history tracking
   - [x] Favorites/Bookmarks system
 
 - [ ] **Search**
   - [ ] Advanced search filters
   - [ ] Recently added anime section
 
-- [ ] **User Experience**
-  - [ ] Dark/Light theme toggle
-  - [ ] Progressive Web App (PWA)
-  - [ ] Offline viewing capabilities
-  - [ ] Download episodes feature
-
 - [ ] **Features**
-  - [ ] User reviews and ratings
   - [ ] Comment system for episodes
   - [ ] sharing integration
-  - [ ] User recommendations
 
 - [ ] **Performance**
-  - [ ] Database optimization
   - [ ] Caching system implementation
 
 - [ ] **Advanced Features**
-  - [ ] AI powered anime recommendations
   - [ ] Watch party functionality
-  - [ ] Anime news integration
-
-### 🐛 Known Issues
-- [ ] Schedule loading
 
 ---
 
