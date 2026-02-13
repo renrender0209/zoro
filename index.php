@@ -1,6 +1,18 @@
 <?php
-require_once __DIR__ . '/_config.php';
+$cfg = __DIR__ . '/_config.php';
+if (!file_exists($cfg)) {
+  http_response_code(500);
+  die("config not found: " . $cfg);
+}
+require_once $cfg;
+
+// デバッグ（確認できたら消す）
+if (!isset($websiteTitle)) {
+  http_response_code(500);
+  die("config loaded, but websiteTitle is not set");
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
