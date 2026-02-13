@@ -1,26 +1,29 @@
 <?php
 $db_host = getenv('DB_HOST') ?: '127.0.0.1';
-$db_port = (int)(getenv('DB_PORT') ?: 3306);
+$db_port = getenv('DB_PORT') ?: '3306';
+$db_name = getenv('DB_NAME') ?: 'defaultdb';
 $db_user = getenv('DB_USER') ?: 'root';
 $db_pass = getenv('DB_PASS') ?: '';
-$db_name = getenv('DB_NAME') ?: 'anime';
+$db_ssl  = getenv('DB_SSL') ?: '';
 
-$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name, $db_port)
-  or die("Connection fail");
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-// 以降は既存設定のままでOK
-$websiteTitle = getenv('WEBSITE_TITLE') ?: "Zoro";
-$websiteUrl = "//{$_SERVER['SERVER_NAME']}";
-$websiteLogo = $websiteUrl . "/files/images/logo_zoro.png";
-$contactEmail = getenv('CONTACT_EMAIL') ?: "@gmail.com";
-$version = getenv('APP_VERSION') ?: "0.2";
+$conn = mysqli_init();
 
-$discord = "https://dsc.gg/kirixen";
-$github = "https://github.com/kirixen";
-$twitter = "https://x.com/KiriX3n";
+/**
+ * Aiven 側が SSL mode REQUIRED の場合：
+ * - まずは “暗号化のみ（証明書検証なし）” で接続できることが多いです。
+ * - より厳密にやるなら CA証明書を指定して VERIFY_CA 相当の構成にします（後述）。
+ */
+if (strtoupper($db_ssl) === 'REQUIRED') {
+  mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, NULL);
+}
 
-$disqus = "https://.disqus.com/embed.js";
-$api = getenv('API_ENDPOINT') ?: "";
-
-$banner = $websiteUrl . "/files/images/banner.png";
-?>
+mysqli_real_connect(
+  $conn,
+  $db_host,
+  $db_user,
+  $db_pass,
+  $db_name,
+  (int)$db_port
+) or die("Connection failed");
