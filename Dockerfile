@@ -1,17 +1,16 @@
 FROM php:8.2-apache
 
+# mod_rewrite 有効化
 RUN a2enmod rewrite
+
+# mysqli 拡張（MySQL接続に必要）
 RUN docker-php-ext-install mysqli
 
-# .htaccess を有効化（AllowOverride All）
+# .htaccess を有効にする（AllowOverride）
 RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 
-# RenderはPORT環境変数でポートが変わるので、それに追従する起動スクリプトを使う
-COPY ./docker/start.sh /start.sh
-RUN chmod +x /start.sh
-
-# アプリ配置
+# もしDocumentRootが直下で良いならこれでOK
+# public/ フォルダがある構成なら、ここを /var/www/html/public に変える
 COPY . /var/www/html/
-RUN chown -R www-data:www-data /var/www/html
 
-CMD ["/start.sh"]
+EXPOSE 80
