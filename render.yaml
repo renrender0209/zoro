@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: zoro-to-clone
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+
+    envVars:
+      - key: DB_HOST
+        value: ""
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_USER
+        value: ""
+      - key: DB_PASS
+        value: ""
+      - key: DB_NAME
+        value: "anime"
+
+      - key: WEBSITE_TITLE
+        value: "Zoro"
+      - key: CONTACT_EMAIL
+        value: "you@example.com"
+      - key: APP_VERSION
+        value: "0.2"
+      - key: API_ENDPOINT
+        value: ""
