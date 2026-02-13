@@ -1,6 +1,6 @@
 <?php
-require('./_config.php');
-?>
+require_once __DIR__ . '/_config.php';
+
 <!DOCTYPE html>
 <html lang="en">
 
