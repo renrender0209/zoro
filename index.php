@@ -1,14 +1,14 @@
 <?php
 require_once __DIR__ . '/_config.php';
-
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>
         <?= $websiteTitle ?> - Official
         <?= $websiteTitle ?> Watch High Quality Anime Online Without Ads
     </title>
+
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="robots" content="index,follow" />
